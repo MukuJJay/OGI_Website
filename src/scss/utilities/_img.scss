@@ -1,0 +1,16 @@
+.main-img{
+    &--right{
+        max-width: 1080px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+    &--left{
+        max-width: 1080px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+}

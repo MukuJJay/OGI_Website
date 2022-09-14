@@ -1,0 +1,49 @@
+//texts
+@mixin text($font-size, $line-height, $letter-spacing) {
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+//cards
+@mixin cards($width, $row-gap, $column-gap){
+    .cards{
+        display: flex;
+        justify-content: center;
+        row-gap: $row-gap;
+        column-gap: $column-gap;
+        flex-wrap: wrap;
+        text-align: left;
+        .card{
+            width: $width;
+        }
+    }
+}
+
+//forms
+@mixin forms($width, $color){
+    width: $width;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid $color;
+    padding: 10px 0;
+    &::placeholder{
+        @include text(15, 1.73, 0.5);
+        color: $color;
+    }
+}
+
+//buttons
+@mixin btn($width, $bg-color, $color, $radius){
+    padding: 10px;
+    width: $width;
+    background-color: $bg-color;
+    border-radius: $radius;
+    border: 0;
+    cursor: pointer;
+    color: $color;
+    @media (max-width: 576px){
+        max-width: 140px;
+    }
+}

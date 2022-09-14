@@ -1,0 +1,11 @@
+@use "../mixins" as *;
+
+.abouts{
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+//media queries
+@include media_typography;
+@include media_text--content;

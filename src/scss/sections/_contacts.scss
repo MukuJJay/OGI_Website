@@ -1,0 +1,12 @@
+@use "../utilities" as *;
+@use "../mixins" as *;
+
+.contacts{
+    input{
+        @include forms(100%, $white);
+    }
+    button{
+        display: block;
+        @include btn(170px, $orange, $white, 100px);
+    }
+}

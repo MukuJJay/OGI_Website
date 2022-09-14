@@ -1,0 +1,29 @@
+@use "../mixins/mediaqueries" as *;
+
+.home{
+    height: 100vh;
+    padding: 17% 0;
+    background-attachment: fixed;
+}
+
+//laptop
+@media (max-width: 1024px){
+    .home{
+        padding: 25% 0;
+    }
+}
+
+//tablet design
+@media (max-width: 768px){
+    .home{
+        padding: 40% 0;
+    }
+}
+
+//mobile design
+@media (max-width: 576px){
+    .home{
+        padding: 50% 0;
+    }
+    @include media_typography;
+}

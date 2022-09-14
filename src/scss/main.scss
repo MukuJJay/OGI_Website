@@ -1,0 +1,48 @@
+//reset css
+@import "./reset/reset";
+
+//globals
+@import "./globals/globals";
+
+//sections
+@import "./sections/header";
+@import "./sections/home";
+@import "./sections/abouts";
+@import "./sections/timeline";
+@import "./sections/services";
+@import "./sections/jobs";
+@import "./sections/contacts";
+
+
+//aligning right
+.align-right{
+    margin: auto 0 auto auto;
+}
+
+//slide-appear on scroll animation
+.slide-in{
+    &.left{
+        transform: translateX(-50%);
+    }
+    &.right{
+        transform: translateX(50%);
+    }
+    &.left, &.right{
+        transition: opacity 0.25s ease-in, transform 0.4s ease-in;
+        opacity: 0;
+    }
+    &.left.appear, &.right.appear{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+//parallex effect
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+//importing media queries
+ 

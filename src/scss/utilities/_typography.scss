@@ -1,0 +1,25 @@
+@use "../mixins/mixins" as *;
+@import url('https://fonts.cdnfonts.com/css/proxima-nova-2');
+
+.text--primary{
+    @include text(44px, normal, 1px);
+}
+.text--secondary{
+    @include text(28px, 0.93, 1px);                                         
+}
+.text--semi-secondary{
+    @include text(25px, normal, 0.5px);                                         
+}
+.text--tertiary{
+    @include text(16px, normal, 0.5px);
+}
+.text--quarternary{
+    @include text(15px, 1.73, 0.5px);
+}
+.text--default{
+    @include text(20px, normal, normal);
+}
+
+.font-size--0{
+    font-size: 0px;
+}

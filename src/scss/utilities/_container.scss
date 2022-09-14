@@ -1,0 +1,17 @@
+@use "./color" as c;
+.container{
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+.text--content{
+    background-color: c.$carbon-black;
+    width: 50%;
+    padding: 140px 0 180px;
+    &__container{
+        max-width: 490px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+}

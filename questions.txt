@@ -1,7 +1,0 @@
-why transfom: scale workes in li but not in a
-why inset is required for position:fixed header
-height auto vs no height
-media vs media-screen
-why its good to add z-index even its default is zero in some positions
-is it good too set transition only for some properties
-favicon as svg or png not ico, whats the difference

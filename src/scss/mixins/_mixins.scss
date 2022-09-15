@@ -43,7 +43,15 @@
     border: 0;
     cursor: pointer;
     color: $color;
+    transition: 0.25s ease;
     @media (max-width: 576px){
         max-width: 140px;
     }
+}
+
+@mixin btn-hover--ghost($border-color, $color){
+    background-color: transparent;
+    border: 2px solid $border-color;
+    color: $color;
+    transform: translateY(-10px);
 }

@@ -1,11 +1,10 @@
 @use "../mixins/mediaqueries" as *;
 
 .jobs{
-    position: relative;
-    z-index: 0;
+    display: flex ;
     overflow: hidden;
+    @include media_slider-section;
 }
 
 //media queries
 @include media_typography;
-@include media_text--content;

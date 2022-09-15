@@ -14,11 +14,6 @@
 @import "./sections/contacts";
 
 
-//aligning right
-.align-right{
-    margin: auto 0 auto auto;
-}
-
 //slide-appear on scroll animation
 .slide-in{
     &.left{
@@ -45,4 +40,6 @@
 }
 
 //importing media queries
- 
+.p--relative{
+    position: relative;
+}

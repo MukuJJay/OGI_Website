@@ -40,11 +40,6 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
     })
 }, appearOptions);
 
-//faders on scroll
-faders.forEach(fader =>{
-    appearOnScroll.observe(fader);
-});
-
 //sliders on scroll
 sliders.forEach(slider => {
     appearOnScroll.observe(slider);

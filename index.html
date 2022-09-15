@@ -46,7 +46,7 @@
                 <p class="text--quarternary color--white">Porta at at suspendisse dolor fames ullamcorper cum id per suspendisse a dignissim eu dapibus platea turpis augue mi proin lorem morbi sapien facilisis lectus.</p>
             </div>
         </div>
-        <img loading="lazy" src="./src/img/abouts.webp" alt="about us" class="main-img--right slide-in right">
+        <div class="main-img--right slide-in right"><img loading="lazy" src="./src/img/abouts.webp" alt="about us"></div>
     </section>
 
     <!--================services=================-->
@@ -54,32 +54,32 @@
         <div class="container">
             <h2 class="text--secondary color--black-two margin-bottom--80">Our Services</h2>
             <ul class="cards">
-                <li class="card"><a href="javascript:void();" class="cards__cta-link">
+                <li class="card"><a href="javascript:void(0);" class="cards__cta-link">
                     <img loading="lazy" src="./src/img/wallet.svg" alt="wallet" class="margin-bottom--20">
                     <h3 class="text--default color--black-two margin-bottom--20">Consectetur vestibulum</h3>
                     <p class="text--quarternary color--gray">Consectetur vestibulum maecenas curabitur hac felis vestibulum urna velit parturient suspendisse a ad lacus mauris</p>
                 </a></li>
-                <li class="card"><a href="javascript:void();" class="cards__cta-link">
+                <li class="card"><a href="javascript:void(0);" class="cards__cta-link">
                     <img loading="lazy" src="./src/img/smile.svg" alt="wallet" class="margin-bottom--20">
                     <h3 class="text--default color--black-two margin-bottom--20">Consectetur vestibulum</h3>
                     <p class="text--quarternary color--gray">Consectetur vestibulum maecenas curabitur hac felis vestibulum urna velit parturient suspendisse a ad lacus mauris </p>
                 </a></li>
-                <li class="card"><a href="javascript:void();" class="cards__cta-link">
+                <li class="card"><a href="javascript:void(0);" class="cards__cta-link">
                     <img loading="lazy" src="./src/img/hearth.svg" alt="wallet" class="margin-bottom--20">
                     <h3 class="text--default color--black-two margin-bottom--20">Consectetur vestibulum</h3>
                     <p class="text--quarternary color--gray">Consectetur vestibulum maecenas curabitur hac felis vestibulum urna velit parturient suspendisse a ad lacus mauris</p>
                 </a></li>
-                <li class="card"><a href="javascript:void();" class="cards__cta-link">
+                <li class="card"><a href="javascript:void(0);" class="cards__cta-link">
                     <img loading="lazy" src="./src/img/rocket.svg" alt="wallet" class="margin-bottom--20">
                     <h3 class="text--default color--black-two margin-bottom--20">Consectetur vestibulum</h3>
                     <p class="text--quarternary color--gray">Consectetur vestibulum maecenas curabitur hac felis vestibulum urna velit parturient suspendisse a ad lacus mauris</p>
                 </a></li>
-                <li class="card"><a href="javascript:void();" class="cards__cta-link">
+                <li class="card"><a href="javascript:void(0);" class="cards__cta-link">
                     <img loading="lazy" src="./src/img/joystick.svg" alt="wallet" class="margin-bottom--20">
                     <h3 class="text--default color--black-two margin-bottom--20">Consectetur vestibulum</h3>
                     <p class="text--quarternary color--gray">Consectetur vestibulum maecenas curabitur hac felis vestibulum urna velit parturient suspendisse a ad lacus mauris</p>
                 </a></li>
-                <li class="card"><a href="javascript:void();" class="cards__cta-link">
+                <li class="card"><a href="javascript:void(0);" class="cards__cta-link">
                     <img loading="lazy" src="./src/img/phone.svg" alt="wallet" class="margin-bottom--20">
                     <h3 class="text--default color--black-two margin-bottom--20">Consectetur vestibulum</h3>
                     <p class="text--quarternary color--gray">Consectetur vestibulum maecenas curabitur hac felis vestibulum urna velit parturient suspendisse a ad lacus mauris</p>
@@ -90,8 +90,8 @@
 
     <!-- =================jobs================== -->
     <section class="jobs font-size--0">
-        <img loading="lazy" src="./src/img/jobs.webp" alt="jobs" class="main-img--left slide-in left">
-        <div class="text--content align-right slide-in right">
+        <div class="main-img--left slide-in left"><img loading="lazy" src="./src/img/jobs.webp" alt="jobs"></div>
+        <div class="text--content  slide-in right">
             <div class="text--content__container">
                 <h2 class="text--secondary color--white margin-bottom--50">We're Hiring</h2>
                 <p class="text--quarternary color--white margin-bottom--30">A posuere scelerisque gravida facilisi parturient magna urna donec parturient per augue a amet quam nullam a ad a. Parturient velit imperdiet in suspendisse eget a parturient adipiscing penatibus convallis himenaeos felis torquent facilisi elementum a penatibus suscipit aliquam.</p>
@@ -105,12 +105,15 @@
         <div class="text--content slide-in left">
             <div class="text--content__container">
                 <h2 class="text--secondary color--white margin-bottom--50">Contact Us</h2>
-                <input type="text" name="name" placeholder="Name" class="text--quarternary color--white margin-bottom--20">
-                <input type="email" name="email" placeholder="Email" class="text--quarternary color--white margin-bottom--20">
-                <input type="text" name="message" placeholder="Message" class="text--quarternary color--white margin-bottom--100">
-                <button class="align-right text--quarternary">Contact Us</button>
+                <form action="javascript:void(0);" method="post" class="p--relative">
+                    <input type="text" name="name" placeholder="Name" class="text--quarternary color--white margin-bottom--20" required>
+                    <input type="email" name="email" placeholder="Email" class="text--quarternary color--white margin-bottom--20" required>
+                    <input type="text" name="message" placeholder="Message" class="text--quarternary color--white margin-bottom--100" required>
+                    <button type="submit" class=" text--quarternary">Contact Us</button>
+                </form>
             </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7835236855053!2d80.24387231526991!3d12.985693218081353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d63755621af%3A0x9ad72f78a113f1da!2sFull%20Creative!5e0!3m2!1sen!2sin!4v1663242149399!5m2!1sen!2sin" class="main-img--right slide-in right" width="50%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
 

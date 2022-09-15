@@ -46,15 +46,18 @@
 }
 
 //text--contents
-@mixin media_text--content{
+@mixin media_slider-section{
     @media (max-width: 768px){
+        flex-direction: column;
         .text--content{
             padding: 80px 0 !important;
             width: 100% !important;
         }
         .main-img--left, .main-img--right{
-            position: static !important;
             max-width: 100% !important;
+            img{
+                max-height: 400px;
+            }
         }
     }
     @media (max-width: 576px){
@@ -65,7 +68,7 @@
 }
 
 //sections
-@mixin section{
+@mixin media_section{
     @media(max-width: 768px){
         padding: 80px 0;
         h2{

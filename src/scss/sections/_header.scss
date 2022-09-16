@@ -8,6 +8,7 @@ header{
     left: 0;
     z-index: 20;
     width: 100%;
+    transition: 0.3s;
     .container{
         display: flex;
         justify-content: space-between;
@@ -19,8 +20,7 @@ header{
     }
     &.scrolled{
         background-color: u.$white;
-        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);        
     }
     ul{
         display: flex;
@@ -30,8 +30,13 @@ header{
         li{
             transition: 0.2s ease;
             &:hover{
-                color: u.$carbon-black;
                 transform: scale(1.3);
+            }
+            &.active{
+                transform: scale(1.3) translateY(-1px);
+                a{
+                    color: u.$crimson;
+                }
             }
         }
     }

@@ -1,0 +1,105 @@
+@use "../mixins/mediaqueries" as *;
+@use "../utilities/" as *;
+
+.timeline{
+    display: flex;
+    overflow: hidden;
+    @include media_slider-section;
+    .text--content{
+        background-color: transparent;
+    }
+    ul{
+        margin-left: 50%;
+        display: inline-block;
+        // &::before{
+        //     content: "";
+        //     width: 4px;
+        //     height: 40px;
+        //     background-color: $gray-two;
+        //     position: absolute;
+        //     z-index: -1;
+        //     left: 50%;
+        //     top: 0;
+        //     padding: 200px 0;
+        // }
+        li{
+            padding-left: 25px;
+            display: inline-block;
+            &::before{
+                content: "";
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $white;
+                border: 4px solid $gray-two;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-40%);
+                z-index: 2;
+                cursor: pointer;
+                box-sizing: border-box;
+                transform: 0.4s;
+            }
+            // &::after{
+            //     content: "";
+            //     width: 4px;
+            //     height: 50px;
+            //     background-color: $white;
+            //     position: absolute;
+            //     z-index: 1;
+            //     left: 50%;
+            //     transform: translateY(-25%);
+            // }
+            &.active{
+                &::before{
+                    content: "";
+                    width:20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    border: 4px solid $crimson;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-40%);
+                    z-index: 2;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                }
+                .year{
+                    color: crimson;
+                }
+            }
+        }
+        .year{
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-130%);
+            width: 50px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        a{
+            display: inline-block;
+        }
+    }
+    &__bar{
+        width: 4px;
+        height: 200px;
+        position: absolute;
+        z-index: -1;
+        background-color: $gray-two;
+        left: 50%;
+        transform: translateY(-100%);
+    }
+    &__hidden-bar{
+        content: "";
+        width: 4px;
+        height: 40px;
+        background-color: $white;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateY(-25%);
+    }
+}

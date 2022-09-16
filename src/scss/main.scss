@@ -2,8 +2,12 @@
 @import "./reset/reset";
 
 //globals
-@import "./globals/globals";
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
 //sections
 @import "./sections/header";
 @import "./sections/home";

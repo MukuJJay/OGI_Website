@@ -28,6 +28,7 @@
     border: 0;
     border-bottom: 2px solid $color;
     padding: 10px 0;
+    transition: 0.4s;
     &::placeholder{
         @include text(15, 1.73, 0.5);
         color: $color;
@@ -43,7 +44,7 @@
     border: 0;
     cursor: pointer;
     color: $color;
-    transition: 0.25s ease;
+    transition: 0.2s ease;
     @media (max-width: 576px){
         max-width: 140px;
     }
@@ -53,5 +54,5 @@
     background-color: transparent;
     border: 2px solid $border-color;
     color: $color;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }

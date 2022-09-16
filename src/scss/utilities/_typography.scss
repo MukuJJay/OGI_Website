@@ -13,6 +13,9 @@
 .text--tertiary{
     @include text(16px, normal, 0.5px);
 }
+.text--semi-tertiary{
+    @include text(16px, normal, normal);
+}
 .text--quarternary{
     @include text(15px, 1.73, 0.5px);
 }

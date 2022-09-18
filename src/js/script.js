@@ -112,3 +112,62 @@ navItems.forEach(item =>{
     })
 })
 
+//=============form validations================
+
+const fName = document.getElementById("name");
+const fEmail = document.getElementById("email");
+const fMsg = document.getElementById("message");
+const form = document.getElementById("form");
+const errorElem = document.getElementById("error");
+const ip1 = document.getElementById("ip1");
+const ip2 = document.getElementById("ip2");
+const ip3 = document.getElementById("ip3");
+const thanks = document.getElementById("thanks");
+
+form.addEventListener("submit", (e) =>{
+    let messages = [];
+    if (fName.value.length < 6){
+        messages.push("Name should be atleast 6 characters");
+    }
+    if (fMsg.value.length<15){
+        messages.push("Message should be atleast 15 characters");
+    }
+    if(messages.length > 0){
+        e.preventDefault();
+        errorElem.innerText = messages.join(', ');
+    }
+    localStorage.setItem("Name", fName.value);
+    localStorage.setItem("Email", fEmail.value);
+    localStorage.setItem("Message", fMsg.value);
+    thanks.innerHTML=`<h2 class="text--secondary color--white margin-bottom--50">Thank you</h2>
+    <p class="text--quarternary color--white">We respect your time for contacting us. We will get to you soon. For the time being you can browse our website for more details.</p>`;
+})
+
+fName.addEventListener("input", () =>{
+    if(fName.value.length>=6){
+        ip1.classList.add("tick--active");
+    }
+    else{
+        ip1.classList.remove("tick--active");
+    }
+});
+
+fEmail.addEventListener("input", () =>{
+    if (fEmail.validity.valid === true){
+        ip2.classList.add("tick--active");
+    }
+    else{
+        ip2.classList.remove("tick--active");
+    }
+})
+
+fMsg.addEventListener("input", () =>{
+    if(fMsg.value.length >=15){
+        ip3.classList.add("tick--active");
+    }
+    else{
+        ip3.classList.remove("tick--active");
+    }
+})
+    
+    

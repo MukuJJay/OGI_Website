@@ -19,6 +19,9 @@
 .text--quarternary{
     @include text(15px, 1.73, 0.5px);
 }
+.text--quinary{
+    @include text(13px, normal, normal);
+}
 .text--default{
     @include text(20px, normal, normal);
 }

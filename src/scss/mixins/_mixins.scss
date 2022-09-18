@@ -22,7 +22,7 @@
 }
 
 //forms
-@mixin forms($width, $color){
+@mixin forms($width, $color, $font-color){
     width: $width;
     background: transparent;
     border: 0;
@@ -32,6 +32,15 @@
     &::placeholder{
         @include text(15, 1.73, 0.5);
         color: $color;
+    }
+    &:hover{
+        outline: 1px solid $color;
+    }
+    &:focus{
+        outline: 0;
+        background-color: $color;
+        color: $font-color;
+        padding: 10px 10px;
     }
 }
 

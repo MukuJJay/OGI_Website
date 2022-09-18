@@ -5,8 +5,34 @@
     @include media_slider-section;
     display: flex ;
     overflow: hidden;
-    input{
-        @include forms(100%, $white);
+    #error{
+        position: absolute;
+        bottom: 55px;
+        z-index: 1;
+        right: 20px;
+        color: red;
+        font-weight: 200;
+    }
+    .input-field{
+        input{
+            @include forms(100%, $white, $carbon-black);
+        }
+        width: 100%;
+        .tick{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            z-index: 1;
+            right: 6px;
+            top: 14px;
+            filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+            display: none;
+        }
+        &.tick--active{
+            .tick{
+                display: block;
+            }
+        }
     }
     button{
         @include btn(170px, $orange, $white, 100px);
@@ -21,7 +47,7 @@
     @media (max-width: 768px){
         iframe{
             width: 100%;
-            min-height: 450px;
+            max-height: 450px;
         }
     }
 }

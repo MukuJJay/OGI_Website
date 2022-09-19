@@ -9,6 +9,17 @@
     <link rel="shortcut icon" href="./src/img/smile.svg" type="image/x-icon">
 </head>
 <body>
+
+    <!-- ===modal=== -->
+    <dialog class="modal" id="modal">
+        <h3 class="text--semi-secondary margin-bottom--50">
+            Your details are...
+        </h3>
+        <p class="text--tertiary margin-bottom--20">Name: <span id="modal__name"></span></p>
+        <p class="text--tertiary margin-bottom--20">Email: <span id="modal__email"></span></p>
+        <button class="text--quarternary" id="close-modal">Close Me</button>
+    </dialog>
+
     <div class="wrapper">
         <!-- ================header=============== -->
     <header>
@@ -136,17 +147,21 @@
                         <img src="./src/img/circle-check-solid.svg" alt="checked" class="tick">
                         <input id="email" type="email" name="email" placeholder="Email" class="text--quarternary color--white margin-bottom--20" required>
                     </div>
-                    <div class="input-field p--relative" id="ip3">
-                        <img src="./src/img/circle-check-solid.svg" alt="checked" class="tick">
-                        <input id="message" type="text" name="message" placeholder="Message" class="text--quarternary color--white margin-bottom--100" required>
+                    <div class="input-field p--relative">
+                        <textarea rows="1" id="message" name="message" placeholder="Message" class="text--quarternary color--white margin-bottom--100"></textarea>
                     </div>            
-                    <button id="submit" type="submit" class=" text--quarternary">Contact Us</button>
+                    <button id="submit" type="submit" class="text--quarternary">Contact Us</button>
                 </form>
+                <!-- <h2 class="text--secondary color--white margin-bottom--50">Thank you</h2>
+                <p class="text--quarternary color--white margin-bottom--50">We respect your time for contacting us. We will get to you soon. For the time being you can browse our website for more details.</p>
+                <div class="buttons">
+                    <button class="text--quarternary">See Your Details</button>
+                    <button class="text--quarternary">Delete Form data</button>
+                </div> -->
             </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7835236855053!2d80.24387231526991!3d12.985693218081353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d63755621af%3A0x9ad72f78a113f1da!2sFull%20Creative!5e0!3m2!1sen!2sin!4v1663242149399!5m2!1sen!2sin" class="main-img--right slide-in right" width="50%" height="700  " style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7835236855053!2d80.24387231526991!3d12.985693218081353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d63755621af%3A0x9ad72f78a113f1da!2sFull%20Creative!5e0!3m2!1sen!2sin!4v1663242149399!5m2!1sen!2sin" class="main-img--right slide-in right" width="50%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-
 
     </div>
 

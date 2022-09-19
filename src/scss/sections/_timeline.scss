@@ -11,17 +11,6 @@
     ul{
         margin-left: 50%;
         display: inline-block;
-        // &::before{
-        //     content: "";
-        //     width: 4px;
-        //     height: 40px;
-        //     background-color: $gray-two;
-        //     position: absolute;
-        //     z-index: -1;
-        //     left: 50%;
-        //     top: 0;
-        //     padding: 200px 0;
-        // }
         li{
             padding-left: 25px;
             display: inline-block;
@@ -40,16 +29,6 @@
                 box-sizing: border-box;
                 transform: 0.4s;
             }
-            // &::after{
-            //     content: "";
-            //     width: 4px;
-            //     height: 50px;
-            //     background-color: $white;
-            //     position: absolute;
-            //     z-index: 1;
-            //     left: 50%;
-            //     transform: translateY(-25%);
-            // }
             &.active{
                 &::before{
                     content: "";

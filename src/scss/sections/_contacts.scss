@@ -5,6 +5,14 @@
     @include media_slider-section;
     display: flex ;
     overflow: hidden;
+    #thanks{
+        height: 450px;
+        .buttons{
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+    }
     #error{
         position: absolute;
         bottom: 55px;
@@ -14,10 +22,12 @@
         font-weight: 200;
     }
     .input-field{
-        input{
+        input, textarea{
             @include forms(100%, $white, $carbon-black);
         }
-        width: 100%;
+        textarea:focus{
+            height: 80px;
+        }
         .tick{
             position: absolute;
             width: 20px;
@@ -43,11 +53,41 @@
         &:hover{
             @include btn-hover--ghost($white, $orange);
         }
+        &.active{
+            position: static;
+            min-width: 170px;
+            &:hover{
+                border: 0;
+                outline: 2px solid $white;
+            }
+        }
     }
     @media (max-width: 768px){
         iframe{
             width: 100%;
-            max-height: 450px;
+            min-height: 300px;
         }
+    }
+}
+
+//modal
+.modal{
+    padding: 20px;
+    min-width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    button{
+        padding: 0 10px;
+        @include btn(140px, $crimson, $white, 10px);
+        &:hover{
+            @include btn-hover--ghost($black, $crimson);
+            border: 0;
+            outline: 2px solid $black;
+        }
+    }
+    @media (max-width: 576px){
+        min-width: 200px;
     }
 }

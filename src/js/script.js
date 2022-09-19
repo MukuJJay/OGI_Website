@@ -112,35 +112,40 @@ navItems.forEach(item =>{
     })
 })
 
-//=============form validations================
+//===========================form validations============================
 
 const fName = document.getElementById("name");
 const fEmail = document.getElementById("email");
-const fMsg = document.getElementById("message");
 const form = document.getElementById("form");
 const errorElem = document.getElementById("error");
 const ip1 = document.getElementById("ip1");
 const ip2 = document.getElementById("ip2");
-const ip3 = document.getElementById("ip3");
 const thanks = document.getElementById("thanks");
 
 form.addEventListener("submit", (e) =>{
     let messages = [];
     if (fName.value.length < 6){
         messages.push("Name should be atleast 6 characters");
-    }
-    if (fMsg.value.length<15){
-        messages.push("Message should be atleast 15 characters");
+        e.preventDefault();
     }
     if(messages.length > 0){
         e.preventDefault();
         errorElem.innerText = messages.join(', ');
     }
-    localStorage.setItem("Name", fName.value);
-    localStorage.setItem("Email", fEmail.value);
-    localStorage.setItem("Message", fMsg.value);
-    thanks.innerHTML=`<h2 class="text--secondary color--white margin-bottom--50">Thank you</h2>
-    <p class="text--quarternary color--white">We respect your time for contacting us. We will get to you soon. For the time being you can browse our website for more details.</p>`;
+    if(fName.value.length>=6){
+        localStorage.setItem("name", fName.value);
+    }
+    if(fEmail.validity.valid === true){
+        localStorage.setItem("email", fEmail.value);
+    }
+    if(messages.length ===0){
+        thanks.innerHTML=`<h2 class="text--secondary color--white margin-bottom--50">Thank you</h2>
+        <p class="text--quarternary color--white margin-bottom--50">We respect your time for contacting us. We will get to you soon. For the time being you can browse our website for more details.</p>
+        <div class="buttons">
+            <button class="text--quarternary active" id="open-modal" onclick = "modalOpen()">See Your Details</button>
+            <button class="text--quarternary active" onclick = "deleteData()">Delete Form data</button>
+        </div>`;
+    }
 })
 
 fName.addEventListener("input", () =>{
@@ -161,13 +166,40 @@ fEmail.addEventListener("input", () =>{
     }
 })
 
-fMsg.addEventListener("input", () =>{
-    if(fMsg.value.length >=15){
-        ip3.classList.add("tick--active");
-    }
-    else{
-        ip3.classList.remove("tick--active");
-    }
-})
     
-    
+//checking local stortage
+if (localStorage.getItem("name") !== null && localStorage.getItem("email") !==null){
+    thanks.innerHTML = `<h2 class="text--secondary color--white margin-bottom--50">Thank you</h2>
+    <p class="text--quarternary color--white margin-bottom--50">We respect your time for contacting us. We will get to you soon. For the time being you can browse our website for more details.</p>
+    <div class="buttons">
+        <button class="text--quarternary active" id="open-modal" onclick = "modalOpen()">See Your Details</button>
+        <button class="text--quarternary active" onclick = "deleteData()">Delete Form data</button>
+    </div>`;
+}
+
+//removing local storage
+
+function deleteData(){
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    alert("Your data has been deleted, This will refresh your page");
+    location.reload();
+}
+
+//==================modal===============
+const openModal = document.getElementById("open-modal");
+const closeModal = document.getElementById("close-modal");
+const modal = document.getElementById("modal");
+const modalName = document.getElementById("modal__name");
+const modalEmail = document.getElementById("modal__email");
+
+function modalOpen(){
+    modal.showModal();
+    modalName.innerText = localStorage.getItem("name");
+    modalEmail.innerText = localStorage.getItem("email");
+}
+
+modal.addEventListener("click", ()=>{
+    modal.close();
+});
+
